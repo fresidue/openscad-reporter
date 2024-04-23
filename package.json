@@ -1,12 +1,12 @@
 {
   "name": "openscad-reporter",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "generates JSON file with constants specified through <specially formatted> echo statements",
   "main": "src/index.js",
   "author": "fresidue",
-  "license": "none",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "start": "nodemon --output pisspot.json",
     "test-json-condenser": "mocha -w test/json-condenser.test.js",
