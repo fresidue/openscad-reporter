@@ -26,7 +26,7 @@ const argv = yargs(hideBin(process.argv))
     description: `Custom "record" tag to be used in the scad file echo(<record>, <prop path>, <prop val>) when recording (Instead of using the default "${DEFAULT_RECORD_TAG}")`,
   })
   .option('inject', {
-    alias: 'n',
+    alias: 'i',
     type: 'string',
     description: 'Scad code that gets directly injected - corresponds directly to openscad cli option -D (i.e. it takes scad statments like "asdf=23;blue=34;"',
   })
@@ -35,19 +35,7 @@ const argv = yargs(hideBin(process.argv))
     type: 'boolean',
     description: 'When quiet is sent, nothing will be logged. Data will only be saved to file (and also returned)',
   })
-
-  // .option('timestamped', {
-  //   alias: 't',
-  //   type: 'boolean',
-  //   description: 'Output files should be timestamped (postfixed by number of seconds since 1970). But if this option is set, a new and timestamped file is added along with the existing one. Both Timestamped and Numbered options are respected, but timestamp gets applied first (so the applied number should normally just be "_1")',
-  // })
-  // .option('numbered', {
-  //   alias: 'n',
-  //   type: 'boolean',
-  //   description: 'Output files should be numbered whenever files are found in output directories that match the filename. The default behavior is to overwrite the existing file. But if this option is set, a new and numbered file is added along with the existing one. Both Timestamped and Numbered options are respected, but timestamp gets applied first (so the applied number should normally just be "_1")',
-  // })
   .parse();
-// console.log({argv});
 
 const argsConfig = {
   INPUT_FILE: _.last(argv._) || undefined,
