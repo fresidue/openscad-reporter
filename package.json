@@ -1,0 +1,31 @@
+{
+  "name": "openscad-reporter",
+  "type": "module",
+  "version": "1.0.1",
+  "description": "generates JSON file with constants specified through <specially formatted> echo statements",
+  "main": "src/index.js",
+  "author": "fresidue",
+  "license": "none",
+  "private": true,
+  "scripts": {
+    "start": "nodemon --output pisspot.json",
+    "test-json-condenser": "mocha -w test/json-condenser.test.js",
+    "test-parse-summary": "mocha -w test/parse-summary.test.js",
+    "test-runner": "mocha -w test/runner.test.js",
+    "test2": "vitest ./test/runner.test",
+    "test": "vitest ./test/*"
+  },
+  "bin": {
+    "runscad": "./bin/runscad"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "lodash": "^4.17.21",
+    "vite-node": "^1.5.0",
+    "yargs": "^17.7.2"
+  }
+}

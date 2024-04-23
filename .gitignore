@@ -1,3 +1,6 @@
+# for local testing
+test/tempytemp
+
 # Logs
 logs
 *.log
