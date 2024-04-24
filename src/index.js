@@ -38,7 +38,7 @@ export const runScad = async ({
     outputFile: outputFile || config.OBJECT_OUTPUT_FILE || extractDefaultOutputFile(resolvedInputFile, false),
     scadInjection: scadInjection || config.SCAD_INJECTION,
     recordTag: recordTag || config.RECORD_TAG,
-    isQuiet: isQuiet || config.QUIET,
+    isQuiet: _.isBoolean(isQuiet) ? isQuiet : config.QUIET,
   };
   const logger = createLogger(params.isQuiet);
   logger.info('\n***    BEGIN recording     ***');
