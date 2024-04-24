@@ -34,5 +34,5 @@ declare module 'openscad-reporter' {
     warningLines: string[],
   };
   
-  export async function runScad(config: ScadConfig): ScadRes;
+  export function runScad(config: ScadConfig): Promise<ScadRes>;
 }
