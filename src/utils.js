@@ -51,9 +51,7 @@ const directoryExists = (filePath) => {
 };
 
 const createDirectory = (filePath) => {
-  console.log({filePath});
   const dir = path.parse(filePath).dir;
-  console.log({dir});
   fs.mkdirSync(dir);
 };
 
@@ -96,7 +94,6 @@ export const validateParams = ({
   }
  
   
-  console.log('asdfasdfasdf', {outputFile});
   if (!outputFile) {
     throw new Error('"outputFile" has been omitted and was NOT set from inputFile for some reason');
   }
@@ -104,10 +101,7 @@ export const validateParams = ({
     if (!isValidOutputExtension(outputFile)) {
       throw new Error(`invalid output file extension "${outputFile.split('.').pop()}" as it is not not one of the expected: [${ORDERED_OUTPUT_EXTENSIONS.join(', ')}]`);
     }
-    console.log('survasdfasdf', {outputFile});
-
     if (!directoryExists(outputFile)) {
-      console.log('directoryExists');
       createDirectory(outputFile);
     }
   

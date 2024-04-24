@@ -46,8 +46,6 @@ const argsConfig = {
   QUIET: argv.quiet || false,
 };
 
-console.log({argsConfig});
-
 export const config = {
   ...argsConfig,
   INIT_CWD: process.env.INIT_CWD,
