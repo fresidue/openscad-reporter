@@ -1,7 +1,7 @@
 {
   "name": "openscad-reporter",
   "type": "module",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "generates JSON file with constants specified through <specially formatted> echo statements",
   "main": "src/index.js",
   "types": "openscad-reporter.d.ts",

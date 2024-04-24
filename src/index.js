@@ -130,12 +130,10 @@ export const runScad = async ({
       }
 
       // print any warning lines
-      if (warningLines.length) {
-        warningLines.info('\n***    WARNING   ***');
-        warningLines.forEach(line => {
-          logger.info(line);
-        });
-      }
+      warningLines.info(`\n***    WARNINGS (${warningLines.length})  ***`);
+      warningLines.forEach(line => {
+        logger.info(line);
+      });
 
 
       // also print the system synopsis
